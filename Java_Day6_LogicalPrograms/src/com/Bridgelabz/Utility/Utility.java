@@ -82,8 +82,6 @@ public class Utility {
 				coupns += str1;
 				cnt++;
 				System.out.println("coupon"+cnt+" =  "+str1);
-				
-				
 			}
 		}
 		
