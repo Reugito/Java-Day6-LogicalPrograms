@@ -71,6 +71,7 @@ public class Utility {
 		
 	}
 	/* method to get random coupons*/
+	
 	public static void getCoupons(int noOfcoupns, int sizeOfCoupon) {
 		int cnt = 0;
 		String str1 = "";
@@ -88,6 +89,7 @@ public class Utility {
 		
 	}
 	/* method to generate random coupons*/
+	
 	public static String generateCoupons(int sizeOfCoupon) {
 		String str = "";
 		Random random = new Random();
@@ -97,6 +99,26 @@ public class Utility {
 			}
 		return str;
 	}
+	/* method to get  Elaps time */
 	
-	
+	public void getElapsTime() {
+		int choice=0;
+	    double start=0, stop=0;
+        do {
+            System.out.println("1. Start");
+            System.out.println("2. Stop");
+            choice = getIntValue();
+            switch(choice) {
+       		
+       			case 1:
+       				start = System.currentTimeMillis();
+       				break;
+       			case 2:
+       				stop = System.currentTimeMillis();
+       				break; 
+            }
+       }while(choice != 2);
+        double elaps = ((stop - start)/1000)%60;
+       System.out.println("Elaps time = "+elaps+" sec");	
+	}
 }
