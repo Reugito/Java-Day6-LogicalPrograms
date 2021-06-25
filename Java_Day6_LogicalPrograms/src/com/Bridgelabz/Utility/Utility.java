@@ -40,7 +40,7 @@ public class Utility {
 			System.out.println(n+" is no perfect number");
 		
 	}
-	/* to check number is prime or not*/
+	/* to check number is prime or not */
 
 	public void checkPrimeNum(int n) {
 		boolean flag = true;
