@@ -107,16 +107,16 @@ public class Utility {
             System.out.println("2. Stop");
             choice = getIntValue();
             switch(choice) {
-       		
        			case 1:
        				start = System.currentTimeMillis();
+       				System.out.println("You have started the stopwatch please select stop now");
        				break;
        			case 2:
        				stop = System.currentTimeMillis();
        				break; 
             }
        }while(choice != 2);
-        double elaps = ((stop - start)/1000)%60;
+       double elaps = ((stop - start)/1000)%60;
        System.out.println("Elaps time = "+elaps+" sec");	
 	}
 }
