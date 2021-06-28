@@ -264,7 +264,8 @@ public class Utility {
         System.out.println("Square root of " + c + " = " + t);
 	}
 	
-	public static void toBinary(int decimal){   
+	// method to get binary number
+	public static int[] toBinary(int decimal){   
 		String result = "";
 	     int binary[] = new int[32];    
 	     int index = 0;    
@@ -275,7 +276,21 @@ public class Utility {
 	     for(int i = index-1;i >= 0;i--){    
 	       result += ""+binary[i];    
 	     }    
-	System.out.println((result+2)); 
+	System.out.println((result+2));
+	return binary;
 	} 
 
+	// method to swap the nibbles of binary number
+	public static int swapNibbles(int x)
+	{
+	    return ((x & 0x0F) << 4 | (x & 0xF0) >> 4);
+	}
+	
+	// check if number is power of two;
+	public static void isPowerOfTwo(int newNumber) {
+		if((newNumber & newNumber-1) ==0)
+			System.out.println(newNumber+" is power of 2");
+		else 
+			System.out.println(newNumber+" is power of 2");
+	}
 }
