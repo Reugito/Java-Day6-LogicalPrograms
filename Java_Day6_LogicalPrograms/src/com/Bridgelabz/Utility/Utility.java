@@ -264,5 +264,18 @@ public class Utility {
         System.out.println("Square root of " + c + " = " + t);
 	}
 	
+	public static void toBinary(int decimal){   
+		String result = "";
+	     int binary[] = new int[32];    
+	     int index = 0;    
+	     while(decimal > 0){    
+	       binary[index++] = decimal%2;    
+	       decimal = decimal/2;    
+	     }    
+	     for(int i = index-1;i >= 0;i--){    
+	       result += ""+binary[i];    
+	     }    
+	System.out.println((result+2)); 
+	} 
 
 }
